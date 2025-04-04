@@ -13,11 +13,11 @@ def html_page(page_name):
     return render_template(page_name)
 
 def write_to_file(data):
-    with open('database.txt', mode='a' newline='') as database:
+    with open('database.txt', mode='a', newline='') as database:
         file = database.write(f"{data['email']}, {data['subject']}, {data['message']}\n")
 
 def write_to_csv(data):
-    with open('database.csv', mode='a') as database2:
+    with open('database.csv', mode='a', newline='') as database2:
         email = data['email']
         subject = data['subject']
         message = data['message']
